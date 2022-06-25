@@ -1,19 +1,25 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import * as WebBrowser from 'expo-web-browser'
+import React, { useCallback } from 'react'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 interface Props {
   title: string
   author: string
+  url: string
 }
 
-function ItemCard({ author, title }: Props) {
+function ItemCard({ author, title, url }: Props) {
+  const handleOnPress = useCallback(() => {
+    WebBrowser.openBrowserAsync(url)
+  }, [url])
+
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={handleOnPress}>
       <Text style={styles.title}>{title}</Text>
       <Text>
         {`By: ${author}`}
       </Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 

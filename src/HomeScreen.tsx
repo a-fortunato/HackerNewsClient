@@ -12,7 +12,7 @@ import useBestStories from './hooks/useBestStories'
 function HomeScreen() {
   const { error, isFetchingStories, stories } = useBestStories()
 
-  // pagination
+  // missing: pagination
   // fetch de comments (i.e. in a custom hook)
 
   if (error) {
@@ -31,7 +31,7 @@ function HomeScreen() {
           <FlatList
             data={stories}
             renderItem={({ item }) => (
-              <ItemCard key={item.id} author={item.by} title={item.title} />
+              <ItemCard key={item.id} author={item.by} title={item.title} url={item.url} />
             )}
             onEndReachedThreshold={20}
             onEndReached={() => {}}

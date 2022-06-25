@@ -17,7 +17,7 @@ function RootNavigation() {
     <NavigationContainer>
       {/* @ts-ignore */}
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Hacker News\' best stories' }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
