@@ -23,11 +23,12 @@ const useBestStories = () => {
 
   useEffect(
     () => {
-      if (results.filter((s) => s.data !== undefined).length === storiesIds?.length) {
+      // if (results.filter((s) => s.data !== undefined).length === storiesIds?.length) {
+      if (stories.length === storiesIds?.length) {
         setFetchingStories(false)
       }
     },
-    [results, storiesIds?.length],
+    [stories.length, storiesIds?.length],
   )
 
   return {

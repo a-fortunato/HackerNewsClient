@@ -5,7 +5,7 @@ import React, { useCallback } from 'react'
 import {
   StyleSheet, Text, TouchableOpacity, View,
 } from 'react-native'
-import config from '../config'
+import config, { Colors } from '../config'
 
 interface Props {
   id: string
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   card: {
     marginVertical: 5,
     borderWidth: 1,
-    borderColor: '#ff6600',
+    borderColor: Colors.primary,
     marginHorizontal: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     margin: 5,
     marginLeft: 0,
     padding: 10,
-    backgroundColor: '#ff6600',
+    backgroundColor: Colors.primary,
     borderRadius: 10,
     alignSelf: 'center',
   },
