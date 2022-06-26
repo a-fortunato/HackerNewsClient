@@ -31,7 +31,13 @@ function HomeScreen() {
           <FlatList
             data={stories}
             renderItem={({ item }) => (
-              <ItemCard key={item.id} author={item.by} title={item.title} url={item.url} />
+              <ItemCard
+                key={item.id}
+                id={item.id}
+                author={item.by}
+                title={item.title}
+                url={item.url}
+              />
             )}
             onEndReachedThreshold={20}
             onEndReached={() => {}}
