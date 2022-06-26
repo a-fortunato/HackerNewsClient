@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeScreen from './HomeScreen'
 
 type RootStackParamList = {
-  Home: undefined;
+  Home: undefined
+  Comments: undefined
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -18,6 +19,7 @@ function RootNavigation() {
       {/* @ts-ignore */}
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Hacker News\' best stories' }} />
+        <Stack.Screen name="Comments" component={HomeScreen} options={{ title: 'Story\'s comments' }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
